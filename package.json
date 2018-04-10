@@ -1,0 +1,11 @@
+{
+  "name": "base",
+  "version": "1.0.0",
+  "repository": "git@github.com:dersam/base.git",
+  "author": "Sam Schmidt <samuel@dersam.net>",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.5"
+  }
+}
