@@ -6,6 +6,15 @@
   "license": "MIT",
   "dependencies": {
     "jquery": "^3.3.1",
-    "lodash": "^4.17.5"
+    "less": "^3.0.1",
+    "lodash": "^4.17.5",
+    "normalize.css": "^8.0.0",
+    "watcher-cli": "^0.0.0"
+  },
+  "scripts": {
+    "build": "npm run-script copy-static && npm run-script css",
+    "copy-static": "cp node_modules/normalize.css/normalize.css public/normalize.css && cp node_modules/lodash/lodash.min.js public/lodash.min.js && cp node_modules/jquery/dist/jquery.min.js public/jquery.min.js",
+    "css": "lessc src/less/app.less public/app.css",
+    "watch": "watcher 'src/less/*.less' 'npm run-script css'"
   }
 }
